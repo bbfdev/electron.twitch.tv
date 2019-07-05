@@ -4,10 +4,10 @@ const { app, BrowserWindow } = electron;
 app.on('ready', () => {
     const window = new BrowserWindow({
                         alwaysOnTop: true,
-                        // frame: false,
+                        frame: false,
                         // width: 250,
                         // height: 500
                     })
+    window.setMenu(null);
     window.loadURL(`file://${__dirname}/views/twitch.tv.html`);
 })
-    
