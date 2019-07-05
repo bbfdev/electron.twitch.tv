@@ -1,0 +1,39 @@
+{
+  "name": "electron.twitch.tv",
+  "version": "1.0.0",
+  "description": "Electron + Twitch TV",
+  "main": "index.js",
+  "build": {
+    "win": {
+      "icon": "./assets/images/tscobra.png",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "start": "electron index.js",
+    "electron:local": "npm run build:prod && electron .",
+    "electron:linux": "electron-builder build --linux",
+    "electron:windows": "electron-builder build --windows",
+    "electron:mac": "electron-builder build --mac"
+  },
+  "keywords": [],
+  "author": "Bruno Borges Furukawa furukawaborgesbruno@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "electron-log": "^3.0.6",
+    "file-system": "^2.2.2",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "electron": "^5.0.4",
+    "electron-builder": "20.14.7"
+  }
+}
