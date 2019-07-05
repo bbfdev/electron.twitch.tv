@@ -5,7 +5,7 @@
   "main": "index.js",
   "build": {
     "win": {
-      "icon": "./assets/images/tscobra.png",
+      "icon": "./assets/images/icons/64x64.png",
       "target": [
         {
           "target": "nsis",
