@@ -15,5 +15,9 @@ export class SafePipe implements PipeTransform {
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  //public urlBase = "https://www.youtube-nocookie.com/embed/rnhqcyU1erM?controls=0"
   public urlBase = "https://player.twitch.tv/?channel=monstercat"
+  constructor() {
+
+  }
 }

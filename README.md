@@ -6,3 +6,8 @@
 **Contribuidores**
 - Bruno Borges Furukawa
 - Dalmo de Souza Lopes
+
+
+**Instalação**
+- npm i
+- npm run angular
