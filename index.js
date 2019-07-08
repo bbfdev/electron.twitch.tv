@@ -21,16 +21,23 @@ app.on('ready', () => {
     //cria a janela
     window = new BrowserWindow({
                         alwaysOnTop: true,
-                        frame: false,
+                        frame: true,
                         icon: path.join(__dirname, 'assets/images/icons/64x64.png'),
                         backgroundColor: '#000000',
-                        width: 620,
-                        height: 378,
-                        show: false
+                        width: "50%",
+                        height: "50%",
+                        show: false,
+                        darkTheme: true,
+                        minimizable: false,
+                        maximizable: false
                     })
 
     window.setMenu(null);
     window.loadURL(`file://${__dirname}/views/twitch.tv.html`);
+    /**
+     * também é possivel carregar o player com
+     * window.loadURL(`https://player.twitch.tv/?channel=monstercat`);
+     */
 
     window.once('ready-to-show', () => {
         log.info(`Aplicação iniciada`)
