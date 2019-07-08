@@ -1,4 +1,18 @@
 <div id="player">
-  <iframe frameborder="0" allowfullscreen="false" scrolling="no" height="100%" width="100%" [src]="urlBase | safe">
-  </iframe>
+  <div *ngIf="urlBase !== undefined">
+    <iframe height="100%" width="100%" [src]="urlBase | safe"  scrolling="no" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <div *ngIf="urlBase === undefined">
+      frame nao pode carregar sem url
+      <form [formGroup]="rForm" (ngSubmit)="Url()">
+        Channel: <input type="text" formControlName="channel" name="channel">
+        <button type="submit" [disabled]="rForm.isValid" > Send</button>
+      </form>
+  </div>
 </div>
+<!-- <div id="window-tools">
+    <div class="w3-row w3-margin">
+      <i class="fa fa-arrows-alt w3-xxxlarge" style="-webkit-app-region: drag"></i>
+      <i class="fa fa-close w3-xxxlarge"></i>
+    </div>
+</div> -->
