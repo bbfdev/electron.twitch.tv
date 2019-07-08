@@ -27,7 +27,6 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    //this.urlBase = "https://player.twitch.tv/?channel=monstercat"
   }
 
   Url() {
