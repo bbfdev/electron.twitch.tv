@@ -30,6 +30,17 @@ export class AppComponent implements OnInit {
   }
 
   Url() {
-    this.urlBase = 'https://player.twitch.tv/?channel=' + this.rForm.value.channel;
+
+    const url = this.rForm.value.channel;
+    const twitch = url.match(/twitch/g);
+    if (twitch) {
+      const textoReplace = 'https://www.twitch.tv/';
+
+      // tslint:disable-next-line:variable-name
+      const resultado_str = url.substring(url.indexOf(textoReplace) + textoReplace.length);
+      this.urlBase = 'https://player.twitch.tv/?channel=' + resultado_str;
+    } else {
+      this.urlBase = undefined;
+    }
   }
 }

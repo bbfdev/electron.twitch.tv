@@ -5,7 +5,7 @@
   <div *ngIf="urlBase === undefined">
       frame nao pode carregar sem url
       <form [formGroup]="rForm" (ngSubmit)="Url()">
-        Channel: <input type="text" formControlName="channel" name="channel">
+        Url da twitch.tv: <input type="text" formControlName="channel" placeholder="cola aqui a url e aperta o botão" name="channel">
         <button type="submit" [disabled]="rForm.isValid" > Send</button>
       </form>
   </div>
