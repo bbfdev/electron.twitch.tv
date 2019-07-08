@@ -31,7 +31,7 @@ app.on('ready', () => {
                         minimizable: true,
                         maximizable: false
                     })
-    window.webContents.openDevTools()
+    //window.webContents.openDevTools()
     window.setMenu(null);
     //window.loadURL(`file://${__dirname}/views/twitch.tv.html`);
     window.loadURL(`file://${__dirname}/dist/electron_twitch_tv/index.html`);
