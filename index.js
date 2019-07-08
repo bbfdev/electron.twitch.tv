@@ -21,7 +21,7 @@ app.on('ready', () => {
     //cria a janela
     window = new BrowserWindow({
                         alwaysOnTop: true,
-                        frame: false,
+                        frame: true,
                         icon: path.join(__dirname, 'assets/images/icons/64x64.png'),
                         backgroundColor: '#000000',
                         width: 620,
