@@ -1,5 +1,5 @@
 import { Component, ViewEncapsulation, ViewChild, ElementRef, PipeTransform, Pipe, OnInit } from '@angular/core';
-import { DomSanitizer } from "@angular/platform-browser";
+import { DomSanitizer } from '@angular/platform-browser';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 
 @Pipe({ name: 'safe' })

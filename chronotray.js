@@ -2,7 +2,7 @@ const electron = require('electron')
 const { Tray, Menu } = electron;
 const contexMenu = Menu.buildFromTemplate([
     {
-        label: 'Twitch.tv floating non official.',
+        label: 'Twitch.tv floating unofficial.',
         enabled: false
     },
     { type: "separator" },
@@ -12,7 +12,7 @@ const contexMenu = Menu.buildFromTemplate([
 class ChronoTray extends Tray {
     constructor(icon) {
         super(icon);
-        this.setToolTip('Twitch.tv floating non official.');
+        this.setToolTip('Twitch.tv floating unofficial.');
         this.setContextMenu(contexMenu);
     }
 }
