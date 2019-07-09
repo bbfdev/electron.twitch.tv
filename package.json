@@ -1,30 +1,32 @@
 {
-  "name": "electron_twitch_tv",
-  "version": "1.0.0",
+  "name": "Twitch",
+  "version": "0.0.1",
   "description": "Electron + Twitch TV",
-  "main": "index.js",
+  "main": "main.js",
   "build": {
     "win": {
-      "icon": "./assets/images/icons/64x64.png",
+      "icon": "src/assets/images/icons/256x256.png",
       "target": [
         {
-          "target": "nsis",
-          "arch": [
-            "x64",
-            "ia32"
-          ]
+          "target": "nsis"
         }
       ]
-    }
+    },
+    "files": [
+      "*.js",
+      "*.png",
+      "dist",
+      "node_modules"
+    ]
   },
   "scripts": {
-    "start": "electron index.js",
+    "start": "electron main.js",
     "electron:local": "npm run build:prod && electron .",
-    "electron:linux": "electron-builder build --linux",
-    "electron:windows": "electron-builder build --windows",
-    "electron:mac": "electron-builder build --mac",
+    "electron:linux": "ng build --base-href ./ && electron-builder build --linux",
+    "electron:windows": "ng build --base-href ./ && electron-builder build --windows",
+    "electron:mac": "ng build --base-href ./ && electron-builder build --mac",
     "ng": "ng",
-    "angular": "ng build && electron index.js",
+    "angular": "ng build && electron main.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
