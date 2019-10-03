@@ -1,12 +1,27 @@
 <div id="player">
   <div *ngIf="urlBase !== undefined">
-    <iframe height="100%" width="100%" [src]="urlBase | safe"  scrolling="no" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe
+      height="100%"
+      width="100%"
+      [src]="urlBase | safe"
+      scrolling="no"
+      frameborder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
   </div>
   <div *ngIf="urlBase === undefined">
-      frame nao pode carregar sem url
-      <form [formGroup]="rForm" (ngSubmit)="Url()">
-        Url da twitch.tv: <input type="text" formControlName="channel" placeholder="cola aqui a url e aperta o botão" name="channel">
-        <button type="submit" [disabled]="rForm.isValid" > Send</button>
-      </form>
+    {{ __dirname }}
+    frame nao pode carregar sem url
+    <form [formGroup]="rForm" (ngSubmit)="Url()">
+      Url da twitch.tv:
+      <input
+        type="text"
+        formControlName="channel"
+        placeholder="cola aqui a url e aperta o botão"
+        name="channel"
+      />
+      <button type="submit" [disabled]="rForm.isValid">Send</button>
+    </form>
   </div>
 </div>

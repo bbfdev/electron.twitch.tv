@@ -20,14 +20,14 @@
     ]
   },
   "scripts": {
-    "start": "electron main.js",
-    "electron:local": "npm run build:prod && electron .",
+    "start": "npm run build && electron .",
+    "build": "ng build",
+    "electron:local": "npm run build && electron .",
     "electron:linux": "ng build --base-href ./ && electron-builder build --linux",
     "electron:windows": "ng build --base-href ./ && electron-builder build --windows",
     "electron:mac": "ng build --base-href ./ && electron-builder build --mac",
     "ng": "ng",
     "angular": "ng build && electron main.js",
-    "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
